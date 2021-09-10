@@ -1,0 +1,21 @@
+<form [formGroup]="signinForm" (ngSubmit)="signinUser(signinForm.value)">
+
+  <div class="mb-3">
+    <label  class="form-label">Email address</label>
+    <input type="email" class="form-control"  placeholder="Enter Email Address" formControlName="email">
+    <span *ngIf="errors.error==='Email does not exists'" class="text-danger">
+      {{errors.error}} 
+    </span>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Password</label>
+    <input type="password" class="form-control"  placeholder="Enter Password" formControlName="password">
+    <span *ngIf="errors.error==='password does not match'" class="text-danger">
+      {{errors.error}} 
+    </span>
+  </div>
+
+  <input class="btn btn-primary" type="submit" value="LogIn" >
+
+</form>
+

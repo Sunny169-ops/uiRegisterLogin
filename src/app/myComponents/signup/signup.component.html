@@ -1,0 +1,17 @@
+<!-- <p>signup works!</p> -->
+<form [formGroup]="signupForm" (ngSubmit)="signupUser(signupForm.value)">
+<div class="mb-3">
+    <label class="form-label">User Name</label>
+    <input type="text" class="form-control"  placeholder="Enter User name" formControlName="username">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Email address</label>
+    <input type="email" class="form-control"  placeholder="Enter Email Address" formControlName="email">
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Password</label>
+    <input type="password" class="form-control"  placeholder="Enter Password" formControlName="password">
+  </div>
+  <input class="btn btn-primary" type="submit" value="SignUp">
+
+</form>
